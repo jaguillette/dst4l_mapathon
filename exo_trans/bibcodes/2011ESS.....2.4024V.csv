@@ -1,0 +1,6 @@
+bibcode,Location,lat,long,address,country,state,trusted,count
+2011ESS.....2.4024V,UC Berkeley,37.8717443,-122.2609626,"University of California Berkeley, 101 Sproul Hall, Berkeley, CA 94704, USA",United States,California,True,1
+2011ESS.....2.4024V,Lowell Observatory,35.2030426,-111.6645534,"Lowell Observatory, 1400 West Mars Hill Road, Flagstaff, AZ 86001, USA",United States,Arizona,True,1
+2011ESS.....2.4024V,Caltech,34.1379059,-118.1255126,"California Institute of Technology, 1200 East California Boulevard, Pasadena, CA 91125, USA",United States,California,True,10
+2011ESS.....2.4024V,UCLA,34.068921,-118.4451812,"University of California Los Angeles, 405 Hilgard Avenue, Los Angeles, CA 90095, USA",United States,California,True,1
+2011ESS.....2.4024V,Princeton University,40.3439888,-74.6514481,"Princeton University, Princeton, NJ 08544, USA",United States,New Jersey,False,1

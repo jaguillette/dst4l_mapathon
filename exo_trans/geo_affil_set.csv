@@ -1,0 +1,41 @@
+bibcode,Location,lat,long,address,country,state,trusted,count
+2013IAUS..288..218R,Space Telescope Science Institute Baltimore MD 21218 USA,39.3327755,-76.6233337,"Steven Muller Building Space Telescope Science Institute, Baltimore, MD 21210, USA",United States,Maryland,False,1
+2013IAUS..288..218R,DLR Institute for Planetary Research 12489 Berlin Germany,52.428692,13.529273,German Aerospace Center (DLR)  Rutherfordstraße 2  12489 Berlin ,Germany,Berlin,True,3
+2013IAUS..288..218R,Department of Physics University of Oxford Oxford OX1 3RH United Kingdom,51.7598294,-1.2595874,"Physics Department, University of Oxford, Oxford, Oxfordshire OX1 3RH, UK",United Kingdom,NULL,False,1
+2013IAUS..288..218R,Harvard-Smithsonian Center for Astrophysics Cambridge MA 02138 USA,42.3814605,-71.1281638,"Center For Astrophysics, Harvard University, 60 Garden Street, Cambridge, MA 02138, USA",United States,Massachusetts,True,1
+2013IAUS..288..218R,School of Physics University of Exeter Stocker Road Exeter EX4 4QL United-Kingdom,50.7358664,-3.5341196,"Stocker Road, University of Exeter, Exeter, Devon EX4, UK",United Kingdom,NULL,True,2
+2008PhDT........70O,California Institute of Technology,34.1379059,-118.1255126,"California Institute of Technology, 1200 East California Boulevard, Pasadena, CA 91125, USA",United States,California,True,1
+2009IAUS..253...21B, Loránd Eötvös University Budapest,47.4907512,19.0586358,"Eötvös Loránd University, 1053 Budapest, Egyetem tér 1-3., Hungary",Hungary,Budapest,True,1
+2009IAUS..253...21B,Konkoly Observatory Budapest,47.499669,18.964282,"Konkoly Observatory, 1121 Budapest, Konkoly-Thege Miklós Way 15-17, Hungary",Hungary,Budapest,True,1
+2009IAUS..253...21B, Harvard-Smithsonian Center for Astrophysics 60 Garden street MA 02138 USA,42.3814605,-71.1281638,"Center For Astrophysics, Harvard University, 60 Garden Street, Cambridge, MA 02138, USA",United States,Massachusetts,True,1
+2009IAUS..253...21B,Harvard-Smithsonian Center for Astrophysics 60 Garden street MA 02138 USA,42.3814605,-71.1281638,"Center For Astrophysics, Harvard University, 60 Garden Street, Cambridge, MA 02138, USA",United States,Massachusetts,True,6
+2013AAS...22134305H,Tennessee State University,36.1670377,-86.8291834,"Tennessee State University, 3500 John A Merritt Boulevard, Nashville, TN 37209, USA",United States,Tennessee,True,1
+2013AAS...22134305H,University of British Columbia Canada,49.2648405,-123.252605,"The University of British Columbia, 2329 West Mall, Vancouver, BC V6T 1Z4, Canada",Canada,British Columbia,True,1
+2013AAS...22134305H,Swarthmore College,39.90652,-75.35199,"Swarthmore College, 500 College Avenue, Swarthmore, PA 19081, USA",United States,Pennsylvania,True,1
+2013AAS...22134305H,Pennsylvania State University,40.7982133,-77.8599084,"Penn State University, 201 Old Main, University Park, PA 16802, USA",United States,Pennsylvania,True,4
+2013AAS...22134305H,Yale University,41.3163244,-72.9223431,"Yale University, New Haven, CT 06520, USA",United States,Connecticut,False,1
+2013AAS...22134305H,University of California Berkeley,37.8717443,-122.2609626,"University of California Berkeley, 101 Sproul Hall, Berkeley, CA 94704, USA",United States,California,True,1
+2013AAS...22134305H,NASA Exoplanet Science Institute Caltech,34.1379059,-118.1255126,"California Institute of Technology, 1200 East California Boulevard, Pasadena, CA 91125, USA",United States,California,True,3
+2013AAS...22134305H,University of California Santa Cruz,36.9913856,-122.0608718,"University of California Santa Cruz, 1156 High Street, Santa Cruz, CA 95064, USA",United States,California,True,1
+2013AAS...22134305H,"""Max Planck Institute for Astronomy Germany Germany",50.73009,7.06957,"Max Planck Institute for Radio Astronomy, University of Bonn, Campus Endenich, Auf dem Hügel 69, 53121 Bonn, Germany",Germany,North Rhine-Westphalia,True,1
+2012yscc.conf...86S,Main (Pulkovo) Astronomical Observatory (MAO) of Russian Academy of Sciences (RAS) St Petersburg Russia,59.9342802,30.3350986,"Saint Petersburg, Russia",Russia,Saint Petersburg,False,5
+2011M&PS...46..767H,Planetary Sciences Group Department of Physics University of Central Florida Orlando Florida USA,28.6024276,-81.2000599,"University of Central Florida, 4000 Central Florida Boulevard, Orlando, FL 32816, USA",United States,Florida,True,1
+2011IAUS..276..252F,UCO/Lick University of California Santa Cruz CA 95064,37.0015093,-122.0613282,"University of California Observatories, University of California Santa Cruz, Santa Cruz, CA 95064, USA",United States,California,False,1
+2011ESS.....2.4024V,UC Berkeley,37.8717443,-122.2609626,"University of California Berkeley, 101 Sproul Hall, Berkeley, CA 94704, USA",United States,California,True,1
+2011ESS.....2.4024V,Lowell Observatory,35.2030426,-111.6645534,"Lowell Observatory, 1400 West Mars Hill Road, Flagstaff, AZ 86001, USA",United States,Arizona,True,1
+2011ESS.....2.4024V,Caltech,34.1379059,-118.1255126,"California Institute of Technology, 1200 East California Boulevard, Pasadena, CA 91125, USA",United States,California,True,10
+2011ESS.....2.4024V,UCLA,34.068921,-118.4451812,"University of California Los Angeles, 405 Hilgard Avenue, Los Angeles, CA 90095, USA",United States,California,True,1
+2011ESS.....2.4024V,Princeton University,40.3439888,-74.6514481,"Princeton University, Princeton, NJ 08544, USA",United States,New Jersey,False,1
+2011epsc.conf..481W,Institute of Physics University of Graz Austria,47.070714,15.439504,"Graz, Austria",Austria,Styria,False,1
+2010cosp...38.2515N,National Astronomical Observatory of Japan,35.675224,139.537814,"National Astronomical Observatory of Japan, 2 Chome-2-21-1 Osawa, Mitaka, Tokyo 181-0015, Japan",Japan,Tokyo,False,2
+2010cosp...38.2515N,Institute of Space and Astronautical Science Japan Aerospace Exploration Agency,35.680808,139.55829,"Japanese space program, 7 Chome-44 Jindaiji Higashimachi, Chofu, Tokyo 182-0012, Japan",Japan,Tokyo,True,1
+2010AAS...21542303D,University of Washington,47.6554211,-122.3061342,"University of Washington, Seattle, WA, USA",United States,Washington,False,1
+2010AAS...21542303D,The University of Toledo,41.6621416,-83.6126979,"The University of Toledo, 2801 West Bancroft Street, Toledo, OH 43606, USA",United States,Ohio,True,3
+2010AAS...21542303D,Universidade de Sao Paulo Brazil,-22.2840428,-48.5700115,"Universidade de São Paulo, Jaú - São Paulo, Brazil",Brazil,São Paulo,False,3
+2009RMxAC..35R.287M,Universidad de Chile Chile,-33.4425164,-70.6373879,"Universidad de Chile - Diagonal Paraguay 257, Santiago, Santiago Metropolitan Region, Chile",Chile,Santiago Metropolitan Region,True,1
+2009DPS....41.3102T,Max Planck Germany,52.138697,11.652782,"Max-Planck-Institut, Otto-von-Guericke University Magdeburg, Sandtorstraße 1, 39106 Magdeburg, Germany",Germany,Saxony-Anhalt,True,1
+2009DPS....41.3102T,University Collge London United Kingdom,51.5211841,-0.1287784,"University of London, Senate House, Malet Street, London, Greater London WC1E 7HU, UK",United Kingdom,NULL,True,1
+2009DPS....41.3102T,Institut d'Astrophysique de Paris France,48.856614,2.3522219,"Paris, France",France,Île-de-France,False,1
+2009DPS....41.3102T,University of Arizona,33.4522217,-112.0662126,"The University of Arizona College of Medicine - Phoenix, 550 East Van Buren Street, Phoenix, AZ 85004, USA",United States,Arizona,True,1
+2009DPS....41.3102T,Jet Propulsion Lab,34.197933,-118.175194,"JPL, La Cañada Flintridge, CA 91011, USA",United States,California,False,3
+2009and..book..123S,Department of Earth Atmospheric and Planetary Sciences Department of Physics Massachusetts Institute of Technology,42.3588667,-71.0938246,"Massachusetts Institute of Technology, 77 Massachusetts Avenue, Cambridge, MA 02139, USA",United States,Massachusetts,True,1

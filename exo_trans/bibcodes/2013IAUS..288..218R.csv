@@ -1,0 +1,6 @@
+bibcode,Location,lat,long,address,country,state,trusted,count
+2013IAUS..288..218R,Space Telescope Science Institute Baltimore MD 21218 USA,39.3327755,-76.6233337,"Steven Muller Building Space Telescope Science Institute, Baltimore, MD 21210, USA",United States,Maryland,False,1
+2013IAUS..288..218R,DLR Institute for Planetary Research 12489 Berlin Germany,52.428692,13.529273,German Aerospace Center (DLR)  Rutherfordstraße 2  12489 Berlin ,Germany,Berlin,True,3
+2013IAUS..288..218R,Department of Physics University of Oxford Oxford OX1 3RH United Kingdom,51.7598294,-1.2595874,"Physics Department, University of Oxford, Oxford, Oxfordshire OX1 3RH, UK",United Kingdom,NULL,False,1
+2013IAUS..288..218R,Harvard-Smithsonian Center for Astrophysics Cambridge MA 02138 USA,42.3814605,-71.1281638,"Center For Astrophysics, Harvard University, 60 Garden Street, Cambridge, MA 02138, USA",United States,Massachusetts,True,1
+2013IAUS..288..218R,School of Physics University of Exeter Stocker Road Exeter EX4 4QL United-Kingdom,50.7358664,-3.5341196,"Stocker Road, University of Exeter, Exeter, Devon EX4, UK",United Kingdom,NULL,True,2

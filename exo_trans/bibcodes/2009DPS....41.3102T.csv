@@ -1,0 +1,6 @@
+bibcode,Location,lat,long,address,country,state,trusted,count
+2009DPS....41.3102T,Max Planck Germany,52.138697,11.652782,"Max-Planck-Institut, Otto-von-Guericke University Magdeburg, Sandtorstraße 1, 39106 Magdeburg, Germany",Germany,Saxony-Anhalt,True,1
+2009DPS....41.3102T,University Collge London United Kingdom,51.5211841,-0.1287784,"University of London, Senate House, Malet Street, London, Greater London WC1E 7HU, UK",United Kingdom,NULL,True,1
+2009DPS....41.3102T,Institut d'Astrophysique de Paris France,48.856614,2.3522219,"Paris, France",France,Île-de-France,False,1
+2009DPS....41.3102T,University of Arizona,33.4522217,-112.0662126,"The University of Arizona College of Medicine - Phoenix, 550 East Van Buren Street, Phoenix, AZ 85004, USA",United States,Arizona,True,1
+2009DPS....41.3102T,Jet Propulsion Lab,34.197933,-118.175194,"JPL, La Cañada Flintridge, CA 91011, USA",United States,California,False,3

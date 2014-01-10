@@ -1,0 +1,10 @@
+bibcode,Location,lat,long,address,country,state,trusted,count
+2013AAS...22134305H,Tennessee State University,36.1670377,-86.8291834,"Tennessee State University, 3500 John A Merritt Boulevard, Nashville, TN 37209, USA",United States,Tennessee,True,1
+2013AAS...22134305H,University of British Columbia Canada,49.2648405,-123.252605,"The University of British Columbia, 2329 West Mall, Vancouver, BC V6T 1Z4, Canada",Canada,British Columbia,True,1
+2013AAS...22134305H,Swarthmore College,39.90652,-75.35199,"Swarthmore College, 500 College Avenue, Swarthmore, PA 19081, USA",United States,Pennsylvania,True,1
+2013AAS...22134305H,Pennsylvania State University,40.7982133,-77.8599084,"Penn State University, 201 Old Main, University Park, PA 16802, USA",United States,Pennsylvania,True,4
+2013AAS...22134305H,Yale University,41.3163244,-72.9223431,"Yale University, New Haven, CT 06520, USA",United States,Connecticut,False,1
+2013AAS...22134305H,University of California Berkeley,37.8717443,-122.2609626,"University of California Berkeley, 101 Sproul Hall, Berkeley, CA 94704, USA",United States,California,True,1
+2013AAS...22134305H,NASA Exoplanet Science Institute Caltech,34.1379059,-118.1255126,"California Institute of Technology, 1200 East California Boulevard, Pasadena, CA 91125, USA",United States,California,True,3
+2013AAS...22134305H,University of California Santa Cruz,36.9913856,-122.0608718,"University of California Santa Cruz, 1156 High Street, Santa Cruz, CA 95064, USA",United States,California,True,1
+2013AAS...22134305H,"""Max Planck Institute for Astronomy Germany Germany",50.73009,7.06957,"Max Planck Institute for Radio Astronomy, University of Bonn, Campus Endenich, Auf dem Hügel 69, 53121 Bonn, Germany",Germany,North Rhine-Westphalia,True,1

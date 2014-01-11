@@ -38,10 +38,17 @@ NOBIB_WRITER=open_global_csv(BIB_PATH+'/noBib', ['bibcode'])
 SET_WRITER=open_global_csv(BIB_PATH+'/geo_affil_set', ['bibcode','Location','lat','long','address','country','state','trusted','count'])
 #^Opens csv to be used to record all information for the current set of bibcodes.
 
-with open('collected_addresses.json', 'rb') as fp:
-    ADDRESSES_DICT = json.load(fp)
-for location in ADDRESSES_DICT.keys():
-	ADDRESSES_DICT[location]['count']=0
+COLLECTED_ADDRESS_CSV=open('collected_addresses.csv', 'rb')
+ADDRESSES_DICT = {}
+COLLECTED_ADDRESS_LIST=csv.reader(COLLECTED_ADDRESS_CSV, delimiter=',', quotechar='"')
+for row in COLLECTED_ADDRESS_LIST:
+  	ADDRESSES_DICT[row[0]]=[row[1],row[2],row[3],row[4],row[5],row[6],row[7]]
+   	#'affiliation':[lat, long, formatted_address, country, admin_area_l1, trusted, count]
+for affiliation in ADDRESSES_DICT.keys():
+	ADDRESSES_DICT[affiliation][6]=0
+COLLECTED_ADDRESS_CSV.close()
+
+COLLECTED_ADDRESS_WRITER=csv.writer(open('collected_addresses.csv', 'wb+'), delimiter=',', quotechar='"')
 
 #----END GLOBAL VARIABLES----
 
@@ -132,10 +139,13 @@ def geoQuery(loc, bibcode, count):
 				stringCount=str(count).encode('utf-8')
 				stringBibcode=bibcode.encode('utf-8')
 				writeList=[stringBibcode,loc,lat,lng,address,country,state,trusted,stringCount]
-				ADDRESSES_DICT[loc]={'location':(lat,lng,address,country,state,trusted),'count':count}
+				ADDRESSES_DICT[loc]=[lat,lng,address,country,state,trusted,count]
+				#'affiliation':[lat, long, formatted_address, country, admin_area_l1, trusted, count]
+				COLLECTED_ADDRESS_WRITER.writerow([loc,lat,lng,address,country,state,trusted,count])
 			else:
 				writeList=[bibcode, loc, geoDict['status'],count,time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())]
-				ADDRESSES_DICT[loc]={'location':('unknown','unknown','unknown','unknown','unknown','unknown'),'count':count}
+				ADDRESSES_DICT[loc]=['unknown','unknown','unknown','unknown','unknown','unknown',count]
+				COLLECTED_ADDRESS_WRITER.writerow([loc,'unknown','unknown','unknown','unknown','unknown','unknown',count])
 			time.sleep(1)
 			return writeList
 		except requests.exceptions.ConnectionError, e:
@@ -143,22 +153,25 @@ def geoQuery(loc, bibcode, count):
 			print(e)
 			writeList=[bibcode, loc, "ConnectionError",count,time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())]
 			return writeList
-	elif ADDRESSES_DICT[loc]['location'][0]=='unknown':
+	elif ADDRESSES_DICT[loc][0]=='unknown':
 		print('"{0}" has already been sent to be geocoded, and no results were found.'.format(loc))
 		stringBibcode=bibcode.encode('utf-8')
 		writeList=[stringBibcode, loc, 'Zero results, duplicate query',count,time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())]
 	else:
 		print('"{0}" has already been geocoded successfully. Using previous results...'.format(loc))
-		lat=str(ADDRESSES_DICT[loc]['location'][0]).encode('utf-8')
-		lng=str(ADDRESSES_DICT[loc]['location'][1]).encode('utf-8')
-		address=ADDRESSES_DICT[loc]['location'][2].encode('utf-8')
-		country=ADDRESSES_DICT[loc]['location'][3].encode('utf-8')
-		state=ADDRESSES_DICT[loc]['location'][4].encode('utf-8')
-		trusted=ADDRESSES_DICT[loc]['location'][5]
+		lat=str(ADDRESSES_DICT[loc][0]).encode('utf-8')
+		lng=str(ADDRESSES_DICT[loc][1]).encode('utf-8')
+		address=ADDRESSES_DICT[loc][2].encode('utf-8')
+		country=ADDRESSES_DICT[loc][3].encode('utf-8')
+		try:
+			state=ADDRESSES_DICT[loc][4].encode('utf-8')
+		except UnicodeEncodeError:
+			print('{0} has some characters doing crazy stuff in the address. Find out why.')
+		trusted=ADDRESSES_DICT[loc][5]
 		stringCount=str(count).encode('utf-8')
 		stringBibcode=bibcode.encode('utf-8')
 		writeList=[stringBibcode,loc,lat,lng,address,country,state,trusted,stringCount]
-		ADDRESSES_DICT[loc]['count']+=count
+		ADDRESSES_DICT[loc][6]+=count
 		return writeList
 
 def geoQueryWriter(writeList, csvWriter):
@@ -194,17 +207,21 @@ def dedupeByAddress(csvname):
 	tempdict={}
 	for row in R:
 		print(row)
-		if row[4]!="address":
-			lat=row[2]
-			lon=row[3]
-			addr=row[4]
-			country=row[5]
-			state=row[6]
-			count=int(row[8])
-			if addr not in tempdict.keys():
-				tempdict[addr]=[lat,lon,addr,state,country,count]
-			else:
-				tempdict[addr][5]+=count
+		try:
+			if row[4]!="address":
+				lat=row[2]
+				lon=row[3]
+				addr=row[4]
+				country=row[5]
+				state=row[6]
+				count=int(row[8])
+				if addr not in tempdict.keys():
+					tempdict[addr]=[lat,lon,addr,state,country,count]
+				else:
+					tempdict[addr][5]+=count
+		except IndexError:
+			print("This row doesn't have an address for some reason? Or at least not a 5th column.")
+			pass
 	dedupedwriter=open_global_csv("{0}/geo_affil_set_deduped".format(BIB_PATH),["lat","long","address","state","country","count"])
 	for key in tempdict.keys():
 		dedupedwriter.writerow(tempdict[key])

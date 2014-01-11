@@ -7,7 +7,6 @@ from nltk.tokenize import LineTokenizer
 import csv
 import time
 import pprint
-from unidecode import unidecode
 import matplotlib
 import pandas
 import codecs

@@ -1,0 +1,18 @@
+lat,long,address,state,country,count
+42.3814605,-71.1281638,"Center For Astrophysics, Harvard University, 60 Garden Street, Cambridge, MA 02138, USA",Massachusetts,United States,8
+41.3163244,-72.9223431,"Yale University, New Haven, CT 06520, USA",Connecticut,United States,1
+39.90652,-75.35199,"Swarthmore College, 500 College Avenue, Swarthmore, PA 19081, USA",Pennsylvania,United States,1
+50.7358664,-3.5341196,"Stocker Road, University of Exeter, Exeter, Devon EX4, UK",NULL,United Kingdom,2
+37.8717443,-122.2609626,"University of California Berkeley, 101 Sproul Hall, Berkeley, CA 94704, USA",California,United States,1
+47.499669,18.964282,"Konkoly Observatory, 1121 Budapest, Konkoly-Thege Miklós Way 15-17, Hungary",Budapest,Hungary,1
+36.9913856,-122.0608718,"University of California Santa Cruz, 1156 High Street, Santa Cruz, CA 95064, USA",California,United States,1
+39.3327755,-76.6233337,"Steven Muller Building Space Telescope Science Institute, Baltimore, MD 21210, USA",Maryland,United States,1
+51.7598294,-1.2595874,"Physics Department, University of Oxford, Oxford, Oxfordshire OX1 3RH, UK",NULL,United Kingdom,1
+47.4907512,19.0586358,"Eötvös Loránd University, 1053 Budapest, Egyetem tér 1-3., Hungary",Budapest,Hungary,1
+34.1379059,-118.1255126,"California Institute of Technology, 1200 East California Boulevard, Pasadena, CA 91125, USA",California,United States,4
+52.428692,13.529273,German Aerospace Center (DLR)  Rutherfordstraße 2  12489 Berlin ,Berlin,Germany,3
+50.73009,7.06957,"Max Planck Institute for Radio Astronomy, University of Bonn, Campus Endenich, Auf dem Hügel 69, 53121 Bonn, Germany",North Rhine-Westphalia,Germany,1
+40.7982133,-77.8599084,"Penn State University, 201 Old Main, University Park, PA 16802, USA",Pennsylvania,United States,4
+36.1670377,-86.8291834,"Tennessee State University, 3500 John A Merritt Boulevard, Nashville, TN 37209, USA",Tennessee,United States,1
+49.2648405,-123.252605,"The University of British Columbia, 2329 West Mall, Vancouver, BC V6T 1Z4, Canada",British Columbia,Canada,1
+59.9342802,30.3350986,"Saint Petersburg, Russia",Saint Petersburg,Russia,5

@@ -12,6 +12,7 @@ import pandas
 import codecs
 import cStringIO
 
+
 #enter numerical value for your starting date (month and year)
 startYear = 2013
 startMonth = 1
@@ -47,8 +48,10 @@ class UnicodeWriter:
 realendMonth = endMonth+1
 realendYear =  endYear+1
 
-text = codecs.open('keywords - '+str(startMonth)+' '+str(startYear)+' to '+str(endMonth)+' '+str(endYear)+'.txt','w')
-for y in range(startYear, realendYear):
+daterange = ' - '+str(startMonth)+' '+str(startYear)+' to '+str(endMonth)+' '+str(endYear)
+
+text = codecs.open('keywords'+daterange+'.txt','w')
+for y in range(startYear,realendYear):
     for m in range(startMonth,realendMonth): # first number is starting month, last number needs to be one more than final month
         url = 'http://labs.adsabs.harvard.edu/adsabs/api/search/?q=bibgroup:cfa,pubdate:'+str(y)+'-'+str(m)+'&rows=200&fl=keyword&fmt=json&dev_key='+str(devkey)
         print url
@@ -71,8 +74,8 @@ for y in range(startYear, realendYear):
 text.close()
 print 'finished getting keywords'
 
-text = open('keywords - '+str(startMonth)+' '+str(startYear)+' to '+str(endMonth)+' '+str(endYear)+'.txt','r').read()
-freqlist = open('freqlist - '+str(startMonth)+' '+str(startYear)+' to '+str(endMonth)+' '+str(endYear)+'.txt','wb')
+text = open('keywords'+daterange+'.txt','r').read()
+freqlist = open('freqlist'+daterange+'.txt','wb')
 lowertext = text.lower()
 lines = LineTokenizer(blanklines='discard').tokenize(lowertext)
 freq = nltk.FreqDist(lines)
@@ -82,13 +85,13 @@ writer.writerows(freq.items())
 freqlist.close()
 print 'finished getting frequency distribution'
 
-fileout = codecs.open('frequency - '+str(startMonth)+' '+str(startYear)+' to '+str(endMonth)+' '+str(endYear)+'.csv', 'wb')
+fileout = codecs.open('frequency'+daterange+'.csv', 'wb')
 
 csv_out = csv.writer(fileout, lineterminator='\n', delimiter=',')
 wr = UnicodeWriter(fileout,lineterminator='\n', delimiter=',', dialect='excel',quoting=csv.QUOTE_ALL)
 
 wr.writerow(["Year","Month","Keyword","Frequency"])
-f = codecs.open('freqlist.txt')
+f = codecs.open('freqlist'+daterange+'.txt')
 for line in f:
     vals = line.split('|')
     words = [v.replace('\n', '') for v in vals]

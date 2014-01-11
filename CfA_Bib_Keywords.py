@@ -13,6 +13,17 @@ import pandas
 import codecs
 import cStringIO
 
+#enter numerical value for your starting date (month and year)
+startYear = 2013
+startMonth = 1
+
+#enter numerical value for your ending date (month and year)
+endYear = 2013
+endMonth = 4
+
+#location and file name of your ADS devkey
+devkey = (open('dev_key.txt','r')).read()
+
 #UnicodeWriter from http://docs.python.org/2/library/csv.html#examples
 class UnicodeWriter:
     def __init__(self, f, dialect=csv.excel, encoding="utf-8-sig", **kwds):
@@ -34,11 +45,12 @@ class UnicodeWriter:
 
 #/end UnicodeWriter
 
-devkey = (open('dev_key.txt','r')).read()
+realendMonth = endMonth+1
+realendYear =  endYear+1
 
-text = codecs.open('keywords.txt','a')
-for y in range(2013, 2014):
-    for m in range(1,4): # first number is starting month, last number needs to be one more than final month
+text = codecs.open('keywords - '+str(startMonth)+' '+str(startYear)+' to '+str(endMonth)+' '+str(endYear)+'.txt','w')
+for y in range(startYear, realendYear):
+    for m in range(startMonth,realendMonth): # first number is starting month, last number needs to be one more than final month
         url = 'http://labs.adsabs.harvard.edu/adsabs/api/search/?q=bibgroup:cfa,pubdate:'+str(y)+'-'+str(m)+'&rows=200&fl=keyword&fmt=json&dev_key='+str(devkey)
         print url
         content = requests.get(url)
@@ -52,7 +64,7 @@ for y in range(2013, 2014):
                 cleanList = u' '.join(myList)
                 unicode_list = (str(y)+'|'+str(m)+'|')+u'**'.join(myList)
                 clean_unicode = '\n'+unicode_list.replace('**','\n'+str(y)+'|'+str(m)+'|')
-                #print thisisatest
+                #print clean_unicode
                 text.write(clean_unicode.encode('utf-8'))
             except KeyError:
                 pass
@@ -60,8 +72,8 @@ for y in range(2013, 2014):
 text.close()
 print 'finished getting keywords'
 
-text = open('keywords.txt','r').read()
-freqlist = open('freqlist.txt','wb')
+text = open('keywords - '+str(startMonth)+' '+str(startYear)+' to '+str(endMonth)+' '+str(endYear)+'.txt','r').read()
+freqlist = open('freqlist - '+str(startMonth)+' '+str(startYear)+' to '+str(endMonth)+' '+str(endYear)+'.txt','wb')
 lowertext = text.lower()
 lines = LineTokenizer(blanklines='discard').tokenize(lowertext)
 freq = nltk.FreqDist(lines)
@@ -71,7 +83,7 @@ writer.writerows(freq.items())
 freqlist.close()
 print 'finished getting frequency distribution'
 
-fileout = codecs.open('frequency.csv', 'wb')
+fileout = codecs.open('frequency - '+str(startMonth)+' '+str(startYear)+' to '+str(endMonth)+' '+str(endYear)+'.csv', 'wb')
 
 csv_out = csv.writer(fileout, lineterminator='\n', delimiter=',')
 wr = UnicodeWriter(fileout,lineterminator='\n', delimiter=',', dialect='excel',quoting=csv.QUOTE_ALL)
